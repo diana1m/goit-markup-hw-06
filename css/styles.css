@@ -641,7 +641,8 @@ img {
     position: absolute;
     top: 8px;
     right: 8px;
-
+    
+    outline: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: transparent;
@@ -726,7 +727,37 @@ img {
     border-radius: 4px;
 }
 
+.register-form-agreement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.icon-checked{
+    opacity: 0;
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-checked {
+    opacity: 1;
+}
+
+.icon-unchecked{
+    opacity: 1;
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-unchecked {
+    opacity: 0;
+}
+
+.register-form-desc{
+    font-weight: 400;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+}
 
 .register-form-link{
     color: var(--accent-text-color);
