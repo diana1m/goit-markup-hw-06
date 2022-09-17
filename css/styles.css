@@ -554,6 +554,10 @@ img {
     background-color: var(--accent-bg-color);
 }
 
+.footer-form-box{
+    margin-left: auto;
+}
+
 .footer-form{
     display: flex;
     gap: 12px;
@@ -566,6 +570,7 @@ img {
     padding: 15px;
     display: block;
 
+    color: var(--light-bg-color);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -579,6 +584,11 @@ img {
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
 
     color: var(--light-text-color);
     background-color: var(--accent-bg-color);
@@ -622,11 +632,14 @@ img {
 
 .modal{
     margin: auto;
-    min-height: 300px;
+    height: 581px;
     width: 528px;
     padding: 40px;
 
-    position: relative;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     background-color: var(--light-bg-color);
 }
@@ -648,12 +661,13 @@ img {
     background-color: transparent;
     cursor: pointer;
 
-    transition: color var(--anim-main);
+    transition: color var(--anim-main), border-color var(--anim-main);
 }
 
 .btn-close:hover,
 .btn-close:focus{
     color: var(--accent-bg-color);
+    border-color: var(--accent-bg-color);
 }
 
 .icon-close{
@@ -677,6 +691,14 @@ img {
     position: relative;
     display: block;
     margin-bottom: 10px;
+}
+
+.register-form-group{
+    margin-bottom: 20px;
+}
+
+.register-form-group:last-child{
+    margin-bottom: 0;
 }
 
 .register-form-label{
@@ -734,7 +756,6 @@ img {
     gap: 8px;
 
     margin-bottom: 30px;
-    margin-top: 20px;
 }
 
 .icon-checked{
@@ -753,6 +774,12 @@ img {
 
 .register-form-checkbox:checked + .register-form-icons .icon-unchecked {
     opacity: 0;
+}
+
+.register-form-checkbox:focus+.register-form-icons {
+    outline: 2px solid var(--accent-bg-color);
+    outline-offset: 1px;
+    border-radius: 2px;
 }
 
 .register-form-desc{
